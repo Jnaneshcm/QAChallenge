@@ -109,21 +109,29 @@ function render() {
 
 function renderDashboard() {
   const topics = Array.isArray(state.topics) ? state.topics : (state.topics?.topics || state.topics?.data || []);
+  const username = state.user?.username || 'student';
   return `
     <section class="hero">
-      <h1>Welcome back, ${state.user.username}</h1>
+      <h1>Welcome back, ${username}</h1>
       <p>Choose a topic to begin your timed assessment. Each exam is 3 hours and includes 100 multiple-choice questions.</p>
     </section>
-    <div class="grid">
-      ${topics.map((topic) => `
-        <div class="card topic-card">
-          <h3>${topic.title}</h3>
-          <div class="meta">${topic.description}</div>
-          <div class="badge">${topic.timeLimitMinutes / 60} hours</div>
-          <button data-topic="${topic.slug}" data-action="start-test">Start Test</button>
-        </div>
-      `).join('')}
-    </div>
+    ${topics.length ? `
+      <div class="grid">
+        ${topics.map((topic) => `
+          <div class="card topic-card">
+            <h3>${topic.title}</h3>
+            <div class="meta">${topic.description}</div>
+            <div class="badge">${topic.timeLimitMinutes / 60} hours</div>
+            <button data-topic="${topic.slug}" data-action="start-test">Start Test</button>
+          </div>
+        `).join('')}
+      </div>
+    ` : `
+      <section class="panel">
+        <h3>Loading topics…</h3>
+        <p class="muted">The assessment topics are being loaded. Please wait a moment and refresh if needed.</p>
+      </section>
+    `}
   `;
 }
 
