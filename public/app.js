@@ -108,13 +108,14 @@ function render() {
 }
 
 function renderDashboard() {
+  const topics = Array.isArray(state.topics) ? state.topics : (state.topics?.topics || state.topics?.data || []);
   return `
     <section class="hero">
       <h1>Welcome back, ${state.user.username}</h1>
       <p>Choose a topic to begin your timed assessment. Each exam is 3 hours and includes 100 multiple-choice questions.</p>
     </section>
     <div class="grid">
-      ${state.topics.map((topic) => `
+      ${topics.map((topic) => `
         <div class="card topic-card">
           <h3>${topic.title}</h3>
           <div class="meta">${topic.description}</div>
@@ -359,7 +360,9 @@ function bindCodingActions() {
 
 async function loadDashboardData() {
   const [topicsResponse] = await Promise.all([api('/api/topics')]);
-  state.topics = topicsResponse;
+  state.topics = topicsResponse && typeof topicsResponse === 'object' && !Array.isArray(topicsResponse)
+    ? (topicsResponse.topics || topicsResponse.data || [])
+    : topicsResponse;
 }
 
 async function loadResults() {
