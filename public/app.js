@@ -20,78 +20,91 @@ const state = {
 };
 
 function render() {
-  if (!state.user) {
+  try {
+    if (!state.user) {
+      app.innerHTML = `
+        <div class="container">
+          <div class="nav">
+            <h2>QA Challenge</h2>
+          </div>
+          <section class="hero">
+            <h1>Login or register to start your assessment journey</h1>
+            <p>Take 3-hour exams for Selenium, REST API testing, and Playwright. Admins get a consolidated overview, while candidates can review their own scores.</p>
+            <div class="grid">
+              <div class="card">
+                <h3>100 questions per topic</h3>
+                <p class="muted">Each assessment is crafted as multiple-choice questions with a 3-hour limit.</p>
+              </div>
+              <div class="card">
+                <h3>Live Java compiler</h3>
+                <p class="muted">Students can compile and run Java code directly from the dashboard.</p>
+              </div>
+            </div>
+          </section>
+          <div class="grid">
+            <section class="panel">
+              <h3>Login</h3>
+              <form id="login-form" class="form-stack">
+                <input name="username" placeholder="Username" required />
+                <input name="password" placeholder="Password" type="password" required />
+                <button type="submit">Login</button>
+              </form>
+            </section>
+            <section class="panel">
+              <h3>Register</h3>
+              <form id="register-form" class="form-stack">
+                <input name="username" placeholder="Username" required />
+                <input name="password" placeholder="Password" type="password" required />
+                <button type="submit">Create account</button>
+              </form>
+            </section>
+          </div>
+        </div>
+      `;
+      bindAuthForms();
+      return;
+    }
+
     app.innerHTML = `
       <div class="container">
         <div class="nav">
-          <h2>QA Challenge</h2>
-        </div>
-        <section class="hero">
-          <h1>Login or register to start your assessment journey</h1>
-          <p>Take 3-hour exams for Selenium, REST API testing, and Playwright. Admins get a consolidated overview, while candidates can review their own scores.</p>
-          <div class="grid">
-            <div class="card">
-              <h3>100 questions per topic</h3>
-              <p class="muted">Each assessment is crafted as multiple-choice questions with a 3-hour limit.</p>
-            </div>
-            <div class="card">
-              <h3>Live Java compiler</h3>
-              <p class="muted">Students can compile and run Java code directly from the dashboard.</p>
-            </div>
+          <div>
+            <h2>QA Challenge Dashboard</h2>
+            <div class="badge">${state.user.role === 'admin' ? 'Admin' : 'Candidate'}</div>
           </div>
-        </section>
-        <div class="grid">
-          <section class="panel">
-            <h3>Login</h3>
-            <form id="login-form" class="form-stack">
-              <input name="username" placeholder="Username" required />
-              <input name="password" placeholder="Password" type="password" required />
-              <button type="submit">Login</button>
-            </form>
-          </section>
-          <section class="panel">
-            <h3>Register</h3>
-            <form id="register-form" class="form-stack">
-              <input name="username" placeholder="Username" required />
-              <input name="password" placeholder="Password" type="password" required />
-              <button type="submit">Create account</button>
-            </form>
-          </section>
+          <div class="actions">
+            <button class="secondary" data-action="dashboard">Dashboard</button>
+            <button class="secondary" data-action="results">My Results</button>
+            <button class="secondary" data-action="coding">Coding Lab</button>
+            ${state.user.role === 'admin' ? '<button class="secondary" data-action="admin">Admin</button>' : ''}
+            <button data-action="logout">Logout</button>
+          </div>
         </div>
+
+        ${state.view === 'dashboard' ? renderDashboard() : ''}
+        ${state.view === 'results' ? renderResults() : ''}
+        ${state.view === 'admin' ? renderAdmin() : ''}
+        ${state.view === 'coding' ? renderCoding() : ''}
+        ${state.view === 'test' ? renderTest() : ''}
       </div>
     `;
-    bindAuthForms();
-    return;
-  }
 
-  app.innerHTML = `
-    <div class="container">
-      <div class="nav">
-        <div>
-          <h2>QA Challenge Dashboard</h2>
-          <div class="badge">${state.user.role === 'admin' ? 'Admin' : 'Candidate'}</div>
-        </div>
-        <div class="actions">
-          <button class="secondary" data-action="dashboard">Dashboard</button>
-          <button class="secondary" data-action="results">My Results</button>
-          <button class="secondary" data-action="coding">Coding Lab</button>
-          ${state.user.role === 'admin' ? '<button class="secondary" data-action="admin">Admin</button>' : ''}
-          <button data-action="logout">Logout</button>
-        </div>
+    bindDashboardActions();
+    bindResultActions();
+    bindCodingActions();
+    bindTestActions();
+  } catch (error) {
+    console.error('Render failed', error);
+    app.innerHTML = `
+      <div class="container">
+        <section class="panel">
+          <h3>Something went wrong</h3>
+          <p class="muted">The app could not render correctly. Please refresh the page.</p>
+          <pre>${error.message}</pre>
+        </section>
       </div>
-
-      ${state.view === 'dashboard' ? renderDashboard() : ''}
-      ${state.view === 'results' ? renderResults() : ''}
-      ${state.view === 'admin' ? renderAdmin() : ''}
-      ${state.view === 'coding' ? renderCoding() : ''}
-      ${state.view === 'test' ? renderTest() : ''}
-    </div>
-  `;
-
-  bindDashboardActions();
-  bindResultActions();
-  bindCodingActions();
-  bindTestActions();
+    `;
+  }
 }
 
 function renderDashboard() {
@@ -396,7 +409,16 @@ async function api(path, options = {}) {
     body: options.body ? JSON.stringify(options.body) : undefined
   };
   const response = await fetch(path, config);
-  return response.json();
+  const contentType = response.headers.get('content-type') || '';
+  if (contentType.includes('application/json')) {
+    return response.json();
+  }
+  const text = await response.text();
+  try {
+    return JSON.parse(text);
+  } catch (error) {
+    return { ok: response.ok, status: response.status, raw: text };
+  }
 }
 
 (async function init() {
