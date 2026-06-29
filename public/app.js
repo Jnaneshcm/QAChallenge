@@ -1,5 +1,9 @@
 const app = document.getElementById('app');
 
+if (!app) {
+  throw new Error('Root element #app was not found');
+}
+
 const state = {
   user: null,
   topics: [],
@@ -405,6 +409,7 @@ async function api(path, options = {}) {
       state.view = 'dashboard';
     }
   } catch (error) {
+    console.error('Initial bootstrap failed', error);
     state.user = null;
   }
   render();
