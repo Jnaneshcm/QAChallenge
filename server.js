@@ -5,6 +5,7 @@ const crypto = require('crypto');
 const { execFile } = require('child_process');
 
 const app = express();
+const apiRouter = express.Router();
 const PORT = process.env.PORT || 3000;
 const DATA_FILE = path.join(__dirname, 'data', 'store.json');
 const TEMP_DIR = path.join(__dirname, 'tmp');
@@ -226,15 +227,15 @@ function createQuestionBankMap() {
 
 const questionBanks = createQuestionBankMap();
 
-app.get('/api/health', (_req, res) => {
+apiRouter.get('/health', (_req, res) => {
   res.json({ status: 'ok', topics: topics.length });
 });
 
-app.get('/api/topics', (_req, res) => {
+apiRouter.get('/topics', (_req, res) => {
   res.json(topics);
 });
 
-app.get('/api/me', (req, res) => {
+apiRouter.get('/me', (req, res) => {
   if (!req.session.userId) {
     return res.status(401).json({ error: 'Not logged in' });
   }
@@ -246,7 +247,7 @@ app.get('/api/me', (req, res) => {
   res.json(sanitizeUser(user));
 });
 
-app.post('/api/auth/register', (req, res) => {
+apiRouter.post('/auth/register', (req, res) => {
   const { username, password } = req.body;
   if (!username || !password) {
     return res.status(400).json({ error: 'Username and password are required' });
@@ -269,7 +270,7 @@ app.post('/api/auth/register', (req, res) => {
   res.json(sanitizeUser(newUser));
 });
 
-app.post('/api/auth/login', (req, res) => {
+apiRouter.post('/auth/login', (req, res) => {
   const { username, password } = req.body;
   if (!username || !password) {
     return res.status(400).json({ error: 'Username and password are required' });
@@ -284,13 +285,13 @@ app.post('/api/auth/login', (req, res) => {
   res.json(sanitizeUser(user));
 });
 
-app.post('/api/auth/logout', (req, res) => {
+apiRouter.post('/auth/logout', (req, res) => {
   req.session.userId = null;
   clearSession(res);
   res.json({ ok: true });
 });
 
-app.post('/api/tests/:topic/start', requireAuth, (req, res) => {
+apiRouter.post('/tests/:topic/start', requireAuth, (req, res) => {
   const topic = getTopicBySlug(req.params.topic);
   if (!topic) {
     return res.status(404).json({ error: 'Topic not found' });
@@ -323,7 +324,7 @@ app.post('/api/tests/:topic/start', requireAuth, (req, res) => {
   res.json({ attempt, questions: safeQuestions });
 });
 
-app.post('/api/tests/:topic/submit', requireAuth, (req, res) => {
+apiRouter.post('/tests/:topic/submit', requireAuth, (req, res) => {
   const topic = getTopicBySlug(req.params.topic);
   if (!topic) {
     return res.status(404).json({ error: 'Topic not found' });
@@ -355,13 +356,13 @@ app.post('/api/tests/:topic/submit', requireAuth, (req, res) => {
   res.json({ ok: true, result: attempt, timeUp });
 });
 
-app.get('/api/results', requireAuth, (req, res) => {
+apiRouter.get('/results', requireAuth, (req, res) => {
   const store = readStore();
   const attempts = store.attempts.filter((entry) => entry.userId === req.session.userId).sort((a, b) => new Date(b.startedAt) - new Date(a.startedAt));
   res.json(attempts);
 });
 
-app.get('/api/admin/results', requireAuth, (req, res) => {
+apiRouter.get('/admin/results', requireAuth, (req, res) => {
   const store = readStore();
   const user = store.users.find((entry) => entry.id === req.session.userId);
   if (!user || user.role !== 'admin') {
@@ -386,7 +387,7 @@ app.get('/api/admin/results', requireAuth, (req, res) => {
   res.json({ summary, attempts: submittedAttempts });
 });
 
-app.post('/api/compile', requireAuth, (req, res) => {
+apiRouter.post('/compile', requireAuth, (req, res) => {
   const code = req.body.code || '';
   if (!code.trim()) {
     return res.status(400).json({ error: 'Please enter Java code first.' });
@@ -411,6 +412,12 @@ app.post('/api/compile', requireAuth, (req, res) => {
     });
   });
 });
+
+app.use('/api', apiRouter);
+
+if (process.env.NETLIFY) {
+  app.use('/', apiRouter);
+}
 
 app.get('*', (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
