@@ -7,7 +7,7 @@ if (!app) {
 const TOPICS = [
   {
     slug: 'selenium-webdriver',
-    title: 'Selenium Webdriver',
+    title: 'Selenium WebDriver',
     description: 'Browser automation fundamentals, locators, waits, and frameworks.',
     timeLimitMinutes: 180
   },
