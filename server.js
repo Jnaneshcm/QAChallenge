@@ -1,5 +1,6 @@
 const express = require('express');
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 const crypto = require('crypto');
 const { execFile } = require('child_process');
@@ -8,9 +9,11 @@ const app = express();
 const apiRouter = express.Router();
 const PORT = process.env.PORT || 3000;
 const DATA_FILE = path.join(__dirname, 'data', 'store.json');
-const TEMP_DIR = path.join(__dirname, 'tmp');
 const COOKIE_NAME = 'qa_session';
 const COOKIE_SECRET = process.env.COOKIE_SECRET || 'qa-challenge-secret';
+const IS_NETLIFY = Boolean(process.env.NETLIFY);
+const TEMP_DIR = IS_NETLIFY ? path.join(os.tmpdir(), 'qa-challenge') : path.join(__dirname, 'tmp');
+let inMemoryStore = null;
 
 if (!fs.existsSync(TEMP_DIR)) {
   fs.mkdirSync(TEMP_DIR, { recursive: true });
@@ -101,18 +104,35 @@ const topics = [
 ];
 
 function ensureDataFile() {
+  if (IS_NETLIFY) {
+    return;
+  }
   if (!fs.existsSync(DATA_FILE)) {
     fs.mkdirSync(path.dirname(DATA_FILE), { recursive: true });
     fs.writeFileSync(DATA_FILE, JSON.stringify({ users: [], attempts: [] }, null, 2));
   }
 }
 
+function createEmptyStore() {
+  return { users: [], attempts: [] };
+}
+
 function readStore() {
+  if (IS_NETLIFY) {
+    if (!inMemoryStore) {
+      inMemoryStore = createEmptyStore();
+    }
+    return JSON.parse(JSON.stringify(inMemoryStore));
+  }
   ensureDataFile();
   return JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
 }
 
 function writeStore(store) {
+  if (IS_NETLIFY) {
+    inMemoryStore = JSON.parse(JSON.stringify(store));
+    return;
+  }
   fs.writeFileSync(DATA_FILE, JSON.stringify(store, null, 2));
 }
 
@@ -388,6 +408,12 @@ apiRouter.get('/admin/results', requireAuth, (req, res) => {
 });
 
 apiRouter.post('/compile', requireAuth, (req, res) => {
+  if (IS_NETLIFY) {
+    return res.status(501).json({
+      error: 'Java compilation is unavailable in Netlify deployments. Run the app locally to use Compile & Run.'
+    });
+  }
+
   const code = req.body.code || '';
   if (!code.trim()) {
     return res.status(400).json({ error: 'Please enter Java code first.' });
