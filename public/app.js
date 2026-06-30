@@ -64,11 +64,25 @@ const state = {
   intervalId: null,
   results: [],
   adminResults: null,
+  resultReview: null,
   codingOutput: '',
   runtimeMode: 'browser'
 };
 
 let backend;
+
+function renderBrand(markupClass = '') {
+  const className = markupClass ? `brand ${markupClass}` : 'brand';
+  return `
+    <div class="${className}">
+      <img src="/assets/tekarch-logo.png" alt="TekArch Technology" class="brand-logo" />
+      <div>
+        <div class="brand-name">TekArch Technology</div>
+        <div class="brand-subtitle">QA Challenge Platform</div>
+      </div>
+    </div>
+  `;
+}
 
 function render() {
   try {
@@ -76,10 +90,11 @@ function render() {
       app.innerHTML = `
         <div class="container">
           <div class="nav">
-            <h2>QA Challenge</h2>
+            ${renderBrand('brand-compact')}
           </div>
           ${renderDeploymentNotice()}
           <section class="hero">
+            ${renderBrand('brand-hero')}
             <h1>Login or register to start your assessment journey</h1>
             <p>Take 3-hour exams for Selenium, REST API testing, and Playwright. Admins get a consolidated overview, while candidates can review their own scores.</p>
             <div class="grid">
@@ -122,8 +137,8 @@ function render() {
     app.innerHTML = `
       <div class="container">
         <div class="nav">
-          <div>
-            <h2>QA Challenge Dashboard</h2>
+          <div class="nav-title">
+            ${renderBrand('brand-compact')}
             <div class="badge">${state.user.role === 'admin' ? 'Admin' : 'Candidate'}</div>
           </div>
           <div class="actions">
@@ -137,6 +152,7 @@ function render() {
 
         ${state.view === 'dashboard' ? renderDashboard() : ''}
         ${state.view === 'results' ? renderResults() : ''}
+        ${state.view === 'result-review' ? renderResultReview() : ''}
         ${state.view === 'admin' ? renderAdmin() : ''}
         ${state.view === 'coding' ? renderCoding() : ''}
         ${state.view === 'test' ? renderTest() : ''}
@@ -250,15 +266,80 @@ function renderResults() {
       <h3>Your Results</h3>
       <table class="table">
         <thead>
-          <tr><th>Topic</th><th>Score</th><th>Status</th><th>Submitted</th></tr>
+          <tr><th>Topic</th><th>Correct</th><th>Wrong</th><th>Score</th><th>Status</th><th>Certificate</th><th>Submitted</th></tr>
         </thead>
         <tbody>
-          ${state.results.map((attempt) => `
+          ${state.results.map((attempt, index) => `
             <tr>
-              <td>${attempt.title}</td>
+              <td><button class="secondary" data-action="open-result-review" data-attempt-index="${index}">${attempt.title}</button></td>
+              <td>${attempt.correctAnswers}/${attempt.total}</td>
+              <td>${attempt.wrongAnswers}</td>
               <td>${attempt.score}%</td>
               <td>${attempt.timeUp ? 'Time up' : 'Completed'}</td>
+              <td>${attempt.eligibleForCertificate
+                ? `<button class="secondary" data-action="download-certificate" data-attempt-index="${index}">Download</button>`
+                : '<span class="muted">Available at 80%+</span>'}</td>
               <td>${new Date(attempt.submittedAt).toLocaleString()}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    </section>
+  `;
+}
+
+function renderResultReview() {
+  const attempt = state.resultReview;
+  if (!attempt) {
+    return `
+      <section class="panel">
+        <h3>Result review not available</h3>
+        <p class="muted">Please return to My Results and open an attempt again.</p>
+      </section>
+    `;
+  }
+
+  const correctNumbers = attempt.review.correctNumbers.length ? attempt.review.correctNumbers.join(', ') : 'None';
+  const wrongNumbers = attempt.review.wrongNumbers.length ? attempt.review.wrongNumbers.join(', ') : 'None';
+
+  return `
+    <section class="panel">
+      <div class="nav">
+        <div>
+          <h3>${attempt.title} Review</h3>
+          <div class="muted">Submitted ${new Date(attempt.submittedAt).toLocaleString()}</div>
+        </div>
+        <div class="actions">
+          <button class="secondary" data-action="back-to-results">Back to Results</button>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Correct Questions</h3>
+          <p class="muted">${attempt.correctAnswers}/${attempt.total}</p>
+          <p>${correctNumbers}</p>
+        </div>
+        <div class="card">
+          <h3>Wrong Questions</h3>
+          <p class="muted">${attempt.wrongAnswers}/${attempt.total}</p>
+          <p>${wrongNumbers}</p>
+        </div>
+      </div>
+    </section>
+    <section class="panel">
+      <h3>Question Breakdown</h3>
+      <table class="table">
+        <thead>
+          <tr><th>No.</th><th>Status</th><th>Your Answer</th><th>Correct Answer</th><th>Question</th></tr>
+        </thead>
+        <tbody>
+          ${attempt.review.items.map((item) => `
+            <tr>
+              <td>${item.number}</td>
+              <td>${item.isCorrect ? 'Correct' : 'Wrong'}</td>
+              <td>${item.selectedOption}</td>
+              <td>${item.correctOption}</td>
+              <td>${item.prompt}</td>
             </tr>
           `).join('')}
         </tbody>
@@ -288,6 +369,46 @@ function renderAdmin() {
               <td>${entry.topScore}%</td>
             </tr>
           `).join('')}
+        </tbody>
+      </table>
+    </section>
+    <section class="panel">
+      <h3>Registered Users</h3>
+      <table class="table">
+        <thead>
+          <tr><th>Username</th><th>Role</th><th>Created</th></tr>
+        </thead>
+        <tbody>
+          ${state.adminResults.users.map((user) => `
+            <tr>
+              <td>${user.username}</td>
+              <td>${user.role}</td>
+              <td>${new Date(user.createdAt).toLocaleString()}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    </section>
+    <section class="panel">
+      <h3>All Candidate Attempts</h3>
+      <table class="table">
+        <thead>
+          <tr><th>User</th><th>Topic</th><th>Correct</th><th>Wrong</th><th>Score</th><th>Certificate</th><th>Submitted</th></tr>
+        </thead>
+        <tbody>
+          ${state.adminResults.attempts.length ? state.adminResults.attempts.map((attempt, index) => `
+            <tr>
+              <td>${attempt.username}</td>
+              <td>${attempt.title}</td>
+              <td>${attempt.correctAnswers}/${attempt.total}</td>
+              <td>${attempt.wrongAnswers}</td>
+              <td>${attempt.score}%</td>
+              <td>${attempt.eligibleForCertificate
+                ? `<button class="secondary" data-action="download-admin-certificate" data-attempt-index="${index}">Download</button>`
+                : '<span class="muted">Not eligible</span>'}</td>
+              <td>${new Date(attempt.submittedAt).toLocaleString()}</td>
+            </tr>
+          `).join('') : '<tr><td colspan="7">No submitted tests yet.</td></tr>'}
         </tbody>
       </table>
     </section>
@@ -376,6 +497,7 @@ function bindDashboardActions() {
         render();
       } else if (action === 'results') {
         await loadResults();
+        state.resultReview = null;
         state.view = 'results';
         render();
       } else if (action === 'admin') {
@@ -443,7 +565,43 @@ function bindTestActions() {
 }
 
 function bindResultActions() {
-  // Reserved for future extensions.
+  app.querySelectorAll('[data-action="open-result-review"]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const attemptIndex = Number(button.getAttribute('data-attempt-index'));
+      const attempt = state.results[attemptIndex];
+      if (attempt) {
+        state.resultReview = attempt;
+        state.view = 'result-review';
+        render();
+      }
+    });
+  });
+
+  app.querySelector('[data-action="back-to-results"]')?.addEventListener('click', () => {
+    state.resultReview = null;
+    state.view = 'results';
+    render();
+  });
+
+  app.querySelectorAll('[data-action="download-certificate"]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const attemptIndex = Number(button.getAttribute('data-attempt-index'));
+      const attempt = state.results[attemptIndex];
+      if (attempt) {
+        downloadCertificate(attempt, state.user.username);
+      }
+    });
+  });
+
+  app.querySelectorAll('[data-action="download-admin-certificate"]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const attemptIndex = Number(button.getAttribute('data-attempt-index'));
+      const attempt = state.adminResults?.attempts?.[attemptIndex];
+      if (attempt) {
+        downloadCertificate(attempt, attempt.username);
+      }
+    });
+  });
 }
 
 function bindCodingActions() {
@@ -461,11 +619,16 @@ async function loadDashboardData() {
 }
 
 async function loadResults() {
-  state.results = await backend.getResults();
+  state.results = (await backend.getResults()).map(normalizeAttempt);
 }
 
 async function loadAdminResults() {
-  state.adminResults = await backend.getAdminResults();
+  const response = await backend.getAdminResults();
+  state.adminResults = {
+    summary: Array.isArray(response.summary) ? response.summary : [],
+    users: Array.isArray(response.users) ? response.users : [],
+    attempts: Array.isArray(response.attempts) ? response.attempts.map(normalizeAttempt) : []
+  };
 }
 
 function startCountdown() {
@@ -497,6 +660,113 @@ function formatTime(ms) {
   const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
   const seconds = String(totalSeconds % 60).padStart(2, '0');
   return `${hours}:${minutes}:${seconds}`;
+}
+
+function normalizeAttempt(attempt) {
+  const total = Number.isFinite(attempt.total) ? attempt.total : (Array.isArray(attempt.questions) ? attempt.questions.length : 0);
+  const score = Number.isFinite(attempt.score) ? attempt.score : 0;
+  const correctAnswers = Number.isFinite(attempt.correctAnswers)
+    ? attempt.correctAnswers
+    : Math.round((score / 100) * total);
+  const wrongAnswers = Number.isFinite(attempt.wrongAnswers)
+    ? attempt.wrongAnswers
+    : Math.max(total - correctAnswers, 0);
+  const review = buildAttemptReview(attempt);
+
+  return {
+    ...attempt,
+    total,
+    score,
+    correctAnswers,
+    wrongAnswers,
+    review,
+    eligibleForCertificate: typeof attempt.eligibleForCertificate === 'boolean'
+      ? attempt.eligibleForCertificate
+      : score >= 80
+  };
+}
+
+function buildAttemptReview(attempt) {
+  const questions = Array.isArray(attempt.questions) ? attempt.questions : [];
+  const answers = attempt.answers && typeof attempt.answers === 'object' ? attempt.answers : {};
+  const items = questions.map((question, index) => {
+    const selectedIndex = Number.isInteger(answers[question.id]) ? answers[question.id] : null;
+    const correctIndex = Number.isInteger(question.correctAnswer) ? question.correctAnswer : null;
+    const selectedOption = selectedIndex === null ? 'Not answered' : (question.options?.[selectedIndex] || `Option ${selectedIndex + 1}`);
+    const correctOption = correctIndex === null ? 'Not available' : (question.options?.[correctIndex] || `Option ${correctIndex + 1}`);
+    return {
+      number: index + 1,
+      prompt: question.prompt || `Question ${index + 1}`,
+      selectedOption,
+      correctOption,
+      isCorrect: selectedIndex !== null && selectedIndex === correctIndex
+    };
+  });
+
+  return {
+    items,
+    correctNumbers: items.filter((item) => item.isCorrect).map((item) => item.number),
+    wrongNumbers: items.filter((item) => !item.isCorrect).map((item) => item.number)
+  };
+}
+
+function downloadCertificate(attempt, username) {
+  if (!attempt.eligibleForCertificate) {
+    alert('Certificates are available only for scores of 80% and above.');
+    return;
+  }
+
+  const issuedOn = new Date(attempt.submittedAt || Date.now()).toLocaleDateString();
+  const certificateMarkup = `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>QA Challenge Certificate</title>
+    <style>
+      body { font-family: Georgia, serif; background: #f4efe2; margin: 0; padding: 24px; color: #1c1b19; }
+      .certificate { max-width: 900px; margin: 0 auto; background: linear-gradient(135deg, #fffdf6, #efe3b5); border: 12px solid #2f5d50; padding: 56px; box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12); }
+      .eyebrow { letter-spacing: 0.3rem; text-transform: uppercase; color: #2f5d50; font-size: 12px; }
+      h1 { font-size: 44px; margin: 16px 0 8px; }
+      h2 { font-size: 34px; margin: 12px 0; color: #8c6a16; }
+      p { font-size: 18px; line-height: 1.6; }
+      .score { display: inline-block; margin-top: 24px; padding: 14px 18px; border: 2px solid #8c6a16; font-weight: bold; }
+      .footer { margin-top: 42px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; }
+    </style>
+  </head>
+  <body>
+    <section class="certificate">
+      <div class="eyebrow">QA Challenge Platform</div>
+      <h1>Certificate of Achievement</h1>
+      <p>This certificate is proudly presented to</p>
+      <h2>${escapeHtml(username)}</h2>
+      <p>for successfully completing the <strong>${escapeHtml(attempt.title)}</strong> assessment with an outstanding performance.</p>
+      <div class="score">Score: ${attempt.score}% (${attempt.correctAnswers}/${attempt.total} correct)</div>
+      <div class="footer">
+        <div>Issued on: ${escapeHtml(issuedOn)}</div>
+        <div>Eligibility: 80% and above</div>
+      </div>
+    </section>
+  </body>
+</html>`;
+
+  const blob = new Blob([certificateMarkup], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `${username}-${attempt.topic}-certificate.html`.replace(/\s+/g, '-').toLowerCase();
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
 }
 
 function isLocalHost() {
@@ -679,13 +949,15 @@ function createBrowserBackend() {
       attempt.answers = answers;
       attempt.score = questions.length ? Math.round((correctCount / questions.length) * 100) : 0;
       attempt.total = questions.length;
+      attempt.correctAnswers = correctCount;
+      attempt.wrongAnswers = Math.max(questions.length - correctCount, 0);
       attempt.submittedAt = new Date().toISOString();
       attempt.status = 'submitted';
       attempt.timeSpentMs = elapsedMs;
       attempt.timeUp = elapsedMs > attempt.timeLimitMs;
 
       writeBrowserStore(store);
-      return { ok: true, result: attempt, timeUp: attempt.timeUp };
+      return { ok: true, result: normalizeAttempt(attempt), timeUp: attempt.timeUp };
     },
     async getResults() {
       const user = getBrowserCurrentUser();
@@ -701,11 +973,20 @@ function createBrowserBackend() {
     async getAdminResults() {
       const user = getBrowserCurrentUser();
       if (!user || user.role !== 'admin') {
-        return { summary: [] };
+        return { summary: [], users: [], attempts: [] };
       }
 
       const store = readBrowserStore();
-      const submittedAttempts = store.attempts.filter((entry) => entry.status === 'submitted');
+      const submittedAttempts = store.attempts
+        .filter((entry) => entry.status === 'submitted')
+        .map((entry) => {
+          const owner = store.users.find((candidate) => candidate.id === entry.userId);
+          return {
+            ...normalizeAttempt(entry),
+            username: owner ? owner.username : 'Unknown user',
+            role: owner ? owner.role : 'student'
+          };
+        });
       const summary = TOPICS.map((topic) => {
         const topicAttempts = submittedAttempts.filter((entry) => entry.topic === topic.slug);
         const averageScore = topicAttempts.length
@@ -721,7 +1002,11 @@ function createBrowserBackend() {
         };
       });
 
-      return { summary, attempts: submittedAttempts };
+      return {
+        summary,
+        attempts: submittedAttempts,
+        users: store.users.map(sanitizeBrowserUser)
+      };
     },
     async compile() {
       return {

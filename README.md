@@ -26,3 +26,6 @@ Open http://localhost:3000
 - Hosted builds use browser storage so the tests work on Netlify without a database or writable server filesystem.
 - Admin login is available with username `admin` and password `admin123`.
 - Java compilation is only available when you run the app locally with Node.js and Java installed.
+- Results now show percentage, correct answers, wrong answers, and certificate eligibility.
+- Certificates can be downloaded after scoring 80% or above.
+- The admin area includes topic summaries, all registered users, and all submitted attempts.

@@ -1,20 +1,25 @@
 :root {
   color-scheme: dark;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --bg: #07111f;
-  --panel: #12233a;
-  --panel-2: #1b3650;
-  --accent: #4ea8de;
-  --accent-2: #6ee7b7;
-  --text: #f5f7fa;
-  --muted: #9fb0c2;
-  --border: rgba(255, 255, 255, 0.12);
+  --bg: #07182c;
+  --bg-soft: #123253;
+  --panel: rgba(11, 31, 53, 0.9);
+  --panel-2: #173c61;
+  --accent: #1795e6;
+  --accent-strong: #41b4ff;
+  --accent-2: #8dd6ff;
+  --text: #e9f4ff;
+  --muted: #9eb8d2;
+  --border: rgba(120, 182, 227, 0.2);
+  --shadow: 0 22px 50px rgba(1, 9, 18, 0.35);
 }
 
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  background: linear-gradient(135deg, var(--bg), #0f2341);
+  background:
+    radial-gradient(circle at top left, rgba(23, 149, 230, 0.26), transparent 28%),
+    linear-gradient(160deg, #06111f, var(--bg) 40%, var(--bg-soft));
   color: var(--text);
 }
 
@@ -27,18 +32,23 @@ button {
   border: none;
   border-radius: 10px;
   padding: 0.75rem 1rem;
-  background: linear-gradient(90deg, var(--accent), #7e57c2);
+  background: linear-gradient(90deg, var(--accent), #41b4ff);
   color: white;
   transition: transform 0.15s ease, opacity 0.15s ease;
+  box-shadow: 0 10px 22px rgba(23, 149, 230, 0.2);
 }
 button:hover { transform: translateY(-1px); opacity: 0.95; }
-button.secondary { background: var(--panel-2); }
+button.secondary {
+  background: var(--panel-2);
+  color: #d7efff;
+  box-shadow: none;
+}
 input, textarea {
   width: 100%;
   padding: 0.8rem 0.95rem;
   border-radius: 10px;
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.04);
+  background: rgba(10, 28, 48, 0.9);
   color: var(--text);
 }
 
@@ -49,10 +59,10 @@ input, textarea {
 }
 
 .hero, .card, .panel {
-  background: rgba(18, 35, 58, 0.86);
+  background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 18px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+  box-shadow: var(--shadow);
 }
 
 .hero { padding: 2rem; margin-bottom: 1.5rem; }
@@ -80,22 +90,81 @@ input, textarea {
   width: fit-content;
   padding: 0.3rem 0.6rem;
   border-radius: 999px;
-  background: rgba(110, 231, 183, 0.16);
+  background: rgba(23, 149, 230, 0.18);
   color: var(--accent-2);
   font-size: 0.85rem;
 }
 
-.question-card { margin-top: 1rem; padding: 1rem; border-radius: 16px; background: rgba(255,255,255,0.04); }
+.question-card { margin-top: 1rem; padding: 1rem; border-radius: 16px; background: rgba(15, 42, 70, 0.88); }
 .option-list { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.8rem; }
-.option-list label { padding: 0.7rem 0.85rem; border: 1px solid var(--border); border-radius: 10px; background: rgba(255,255,255,0.04); }
+.option-list label { padding: 0.7rem 0.85rem; border: 1px solid var(--border); border-radius: 10px; background: rgba(8, 24, 42, 0.78); }
 .option-list input { width: auto; margin-right: 0.6rem; }
 
 .nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
 .nav .actions { display: flex; gap: 0.7rem; }
+.nav-title { display: flex; flex-direction: column; gap: 0.55rem; }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+}
+
+.brand-logo {
+  width: 68px;
+  height: auto;
+  display: block;
+}
+
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #eef7ff;
+}
+
+.brand-subtitle {
+  font-size: 0.92rem;
+  color: var(--accent-2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-compact .brand-logo {
+  width: 56px;
+}
+
+.brand-compact .brand-name {
+  font-size: 1.1rem;
+}
+
+.brand-compact .brand-subtitle {
+  font-size: 0.78rem;
+}
+
+.brand-hero {
+  margin-bottom: 1.25rem;
+}
+
+.brand-hero .brand-logo {
+  width: 92px;
+}
+
+.brand-hero .brand-name {
+  font-size: 1.6rem;
+}
 
 .table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
 .table th, .table td { text-align: left; padding: 0.7rem; border-bottom: 1px solid var(--border); }
 
-pre { white-space: pre-wrap; word-break: break-word; background: rgba(0,0,0,0.28); padding: 1rem; border-radius: 12px; }
+pre { white-space: pre-wrap; word-break: break-word; background: rgba(9, 24, 40, 0.9); padding: 1rem; border-radius: 12px; }
 
-@media (max-width: 700px) { .form-row { flex-direction: column; } }
+@media (max-width: 700px) {
+  .form-row { flex-direction: column; }
+  .nav { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .nav .actions { flex-wrap: wrap; }
+  .brand,
+  .brand-hero { align-items: flex-start; }
+  .brand-logo,
+  .brand-hero .brand-logo { width: 64px; }
+}

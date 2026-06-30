@@ -171,6 +171,26 @@ function sanitizeUser(user) {
   return rest;
 }
 
+function withAttemptMetrics(attempt) {
+  const total = Number.isFinite(attempt.total) ? attempt.total : (Array.isArray(attempt.questions) ? attempt.questions.length : 0);
+  const score = Number.isFinite(attempt.score) ? attempt.score : 0;
+  const correctAnswers = Number.isFinite(attempt.correctAnswers)
+    ? attempt.correctAnswers
+    : Math.round((score / 100) * total);
+  const wrongAnswers = Number.isFinite(attempt.wrongAnswers)
+    ? attempt.wrongAnswers
+    : Math.max(total - correctAnswers, 0);
+
+  return {
+    ...attempt,
+    total,
+    score,
+    correctAnswers,
+    wrongAnswers,
+    eligibleForCertificate: score >= 80
+  };
+}
+
 function buildQuestionBank(topicTitle, slug) {
   const templates = {
     'selenium-webdriver': [
@@ -367,18 +387,23 @@ apiRouter.post('/tests/:topic/submit', requireAuth, (req, res) => {
   attempt.answers = answers;
   attempt.score = Math.round((correctCount / questions.length) * 100);
   attempt.total = questions.length;
+  attempt.correctAnswers = correctCount;
+  attempt.wrongAnswers = questions.length - correctCount;
   attempt.submittedAt = new Date().toISOString();
   attempt.status = 'submitted';
   attempt.timeSpentMs = elapsedMs;
   attempt.timeUp = timeUp;
 
   writeStore(store);
-  res.json({ ok: true, result: attempt, timeUp });
+  res.json({ ok: true, result: withAttemptMetrics(attempt), timeUp });
 });
 
 apiRouter.get('/results', requireAuth, (req, res) => {
   const store = readStore();
-  const attempts = store.attempts.filter((entry) => entry.userId === req.session.userId).sort((a, b) => new Date(b.startedAt) - new Date(a.startedAt));
+  const attempts = store.attempts
+    .filter((entry) => entry.userId === req.session.userId)
+    .sort((a, b) => new Date(b.startedAt) - new Date(a.startedAt))
+    .map(withAttemptMetrics);
   res.json(attempts);
 });
 
@@ -389,7 +414,16 @@ apiRouter.get('/admin/results', requireAuth, (req, res) => {
     return res.status(403).json({ error: 'Admin access only' });
   }
 
-  const submittedAttempts = store.attempts.filter((entry) => entry.status === 'submitted');
+  const submittedAttempts = store.attempts
+    .filter((entry) => entry.status === 'submitted')
+    .map((entry) => {
+      const owner = store.users.find((candidate) => candidate.id === entry.userId);
+      return {
+        ...withAttemptMetrics(entry),
+        username: owner ? owner.username : 'Unknown user',
+        role: owner ? owner.role : 'student'
+      };
+    });
   const summary = topics.map((topic) => {
     const topicAttempts = submittedAttempts.filter((entry) => entry.topic === topic.slug);
     const averageScore = topicAttempts.length
@@ -404,7 +438,11 @@ apiRouter.get('/admin/results', requireAuth, (req, res) => {
     };
   });
 
-  res.json({ summary, attempts: submittedAttempts });
+  res.json({
+    summary,
+    attempts: submittedAttempts,
+    users: store.users.map(sanitizeUser)
+  });
 });
 
 apiRouter.post('/compile', requireAuth, (req, res) => {
