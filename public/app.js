@@ -8,13 +8,13 @@ const TOPICS = [
   {
     slug: 'selenium-webdriver',
     title: 'Selenium WebDriver',
-    description: 'Browser automation fundamentals, locators, waits, and frameworks.',
+    description: 'Browser automation fundamentals, locators, waits.',
     timeLimitMinutes: 180
   },
   {
     slug: 'selenium-framework-design',
-    title: 'Selenium Framework Design',
-    description: 'Designing scalable and maintainable Selenium test frameworks.',
+    title: 'Selenium Framework',
+    description: 'Design scalable and maintainable Selenium frameworks.',
     timeLimitMinutes: 180
   },
   {
