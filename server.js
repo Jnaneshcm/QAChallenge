@@ -154,6 +154,7 @@ function seedAdminUser() {
     store.users.push({
       id: createId('user'),
       username: 'admin',
+      preferredName: 'TekArch Admin',
       passwordHash: hashPassword('admin123'),
       role: 'admin',
       createdAt: new Date().toISOString()
@@ -288,7 +289,7 @@ apiRouter.get('/me', (req, res) => {
 });
 
 apiRouter.post('/auth/register', (req, res) => {
-  const { username, password } = req.body;
+  const { username, password, preferredName } = req.body;
   if (!username || !password) {
     return res.status(400).json({ error: 'Username and password are required' });
   }
@@ -299,6 +300,7 @@ apiRouter.post('/auth/register', (req, res) => {
   const newUser = {
     id: createId('user'),
     username,
+    preferredName: preferredName?.trim() || username,
     passwordHash: hashPassword(password),
     role: 'student',
     createdAt: new Date().toISOString()
@@ -421,6 +423,7 @@ apiRouter.get('/admin/results', requireAuth, (req, res) => {
       return {
         ...withAttemptMetrics(entry),
         username: owner ? owner.username : 'Unknown user',
+        preferredName: owner ? (owner.preferredName || owner.username) : 'Unknown user',
         role: owner ? owner.role : 'student'
       };
     });

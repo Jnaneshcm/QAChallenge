@@ -153,6 +153,7 @@ function render() {
               <h3>Register</h3>
               <form id="register-form" class="form-stack">
                 <input name="username" placeholder="Username" required />
+                <input name="preferredName" placeholder="Preferred name for certificate" />
                 <input name="password" placeholder="Password" type="password" required />
                 <button type="submit">Create account</button>
               </form>
@@ -635,7 +636,7 @@ function bindResultActions() {
       const attemptIndex = Number(button.getAttribute('data-attempt-index'));
       const attempt = state.results[attemptIndex];
       if (attempt) {
-        downloadCertificate(attempt, state.user.username);
+        downloadCertificate(attempt, getCertificateDisplayName(state.user.preferredName || state.user.username));
       }
     });
   });
@@ -645,7 +646,7 @@ function bindResultActions() {
       const attemptIndex = Number(button.getAttribute('data-attempt-index'));
       const attempt = state.adminResults?.attempts?.[attemptIndex];
       if (attempt) {
-        downloadCertificate(attempt, attempt.username);
+        downloadCertificate(attempt, getCertificateDisplayName(attempt.preferredName || attempt.username));
       }
     });
   });
@@ -792,30 +793,51 @@ function downloadCertificate(attempt, username) {
   }
 
   const issuedOn = new Date(attempt.submittedAt || Date.now()).toLocaleDateString();
+  const logoUrl = `${window.location.origin}/assets/tekarch-logo.png`;
   const certificateMarkup = `<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>QA Challenge Certificate</title>
     <style>
-      body { font-family: Georgia, serif; background: #f4efe2; margin: 0; padding: 24px; color: #1c1b19; }
-      .certificate { max-width: 900px; margin: 0 auto; background: linear-gradient(135deg, #fffdf6, #efe3b5); border: 12px solid #2f5d50; padding: 56px; box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12); }
-      .eyebrow { letter-spacing: 0.3rem; text-transform: uppercase; color: #2f5d50; font-size: 12px; }
-      h1 { font-size: 44px; margin: 16px 0 8px; }
-      h2 { font-size: 34px; margin: 12px 0; color: #8c6a16; }
-      p { font-size: 18px; line-height: 1.6; }
-      .score { display: inline-block; margin-top: 24px; padding: 14px 18px; border: 2px solid #8c6a16; font-weight: bold; }
-      .footer { margin-top: 42px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; }
+      body { font-family: 'Times New Roman', serif; background: #eef4fb; margin: 0; padding: 28px; color: #18324b; }
+      .certificate { max-width: 980px; margin: 0 auto; background: #ffffff; border: 14px solid #1795e6; padding: 58px 64px; box-shadow: 0 22px 45px rgba(24, 50, 75, 0.14); position: relative; }
+      .certificate::before { content: ''; position: absolute; inset: 16px; border: 2px solid #173c61; pointer-events: none; }
+      .header { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 26px; }
+      .logo { width: 220px; max-width: 100%; }
+      .eyebrow { letter-spacing: 0.35rem; text-transform: uppercase; color: #1795e6; font-size: 12px; text-align: right; }
+      h1 { font-size: 46px; margin: 12px 0 10px; color: #173c61; }
+      h2 { font-size: 36px; margin: 18px 0; color: #1795e6; }
+      p { font-size: 19px; line-height: 1.7; margin: 0; }
+      .headline { text-align: center; margin: 24px 0; }
+      .score { display: inline-block; margin-top: 28px; padding: 14px 22px; border: 2px solid #173c61; color: #173c61; font-weight: bold; background: #f2f9ff; }
+      .footer { margin-top: 54px; display: flex; justify-content: space-between; gap: 24px; font-size: 16px; border-top: 1px solid #d6e6f5; padding-top: 18px; }
+      .signature { margin-top: 44px; display: flex; justify-content: space-between; gap: 32px; }
+      .sign-box { width: 45%; }
+      .sign-line { border-top: 1px solid #173c61; margin-top: 44px; padding-top: 8px; font-size: 15px; color: #4a6279; }
     </style>
   </head>
   <body>
     <section class="certificate">
-      <div class="eyebrow">QA Challenge Platform</div>
-      <h1>Certificate of Achievement</h1>
-      <p>This certificate is proudly presented to</p>
-      <h2>${escapeHtml(username)}</h2>
-      <p>for successfully completing the <strong>${escapeHtml(attempt.title)}</strong> assessment with an outstanding performance.</p>
-      <div class="score">Score: ${attempt.score}% (${attempt.correctAnswers}/${attempt.total} correct)</div>
+      <div class="header">
+        <img src="${escapeHtml(logoUrl)}" alt="TekArch Technology logo" class="logo" />
+        <div class="eyebrow">QA Challenge Platform</div>
+      </div>
+      <div class="headline">
+        <h1>Certificate of Achievement</h1>
+        <p>This certificate is proudly presented to</p>
+        <h2>${escapeHtml(getCertificateDisplayName(username))}</h2>
+        <p>for successfully completing the <strong>${escapeHtml(attempt.title)}</strong> assessment and demonstrating strong performance in the QA Challenge evaluation.</p>
+        <div class="score">Score: ${attempt.score}% (${attempt.correctAnswers}/${attempt.total} correct)</div>
+      </div>
+      <div class="signature">
+        <div class="sign-box">
+          <div class="sign-line">Authorized by TekArch Technology</div>
+        </div>
+        <div class="sign-box">
+          <div class="sign-line">Candidate Preferred Name</div>
+        </div>
+      </div>
       <div class="footer">
         <div>Issued on: ${escapeHtml(issuedOn)}</div>
         <div>Eligibility: 80% and above</div>
@@ -842,6 +864,10 @@ function escapeHtml(value) {
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#39;');
+}
+
+function getCertificateDisplayName(value) {
+  return String(value || '').trim() || 'Student';
 }
 
 function isLocalHost() {
@@ -927,7 +953,7 @@ function createBrowserBackend() {
       writeBrowserSession(user.id);
       return sanitizeBrowserUser(user);
     },
-    async register({ username, password }) {
+    async register({ username, password, preferredName }) {
       if (!username || !password) {
         return { error: 'Username and password are required' };
       }
@@ -940,6 +966,7 @@ function createBrowserBackend() {
       const user = {
         id: createId('user'),
         username,
+        preferredName: preferredName?.trim() || username,
         password,
         role: 'student',
         createdAt: new Date().toISOString()
@@ -1059,6 +1086,7 @@ function createBrowserBackend() {
           return {
             ...normalizeAttempt(entry),
             username: owner ? owner.username : 'Unknown user',
+            preferredName: owner ? (owner.preferredName || owner.username) : 'Unknown user',
             role: owner ? owner.role : 'student'
           };
         });
@@ -1152,6 +1180,7 @@ function createDefaultBrowserStore() {
       {
         id: 'admin-user',
         username: 'admin',
+        preferredName: 'TekArch Admin',
         password: 'admin123',
         role: 'admin',
         createdAt: new Date('2026-01-01T00:00:00.000Z').toISOString()
