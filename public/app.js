@@ -49,6 +49,34 @@ const QUESTION_TEMPLATES = {
   ]
 };
 
+const JAVA_CODING_QUESTIONS = [
+  { id: 'java-1', title: 'Print Hello TekArch', prompt: 'Write a Java program that prints "Hello TekArch" to the console.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    \n  }\n}' },
+  { id: 'java-2', title: 'Add Two Numbers', prompt: 'Write a Java program that adds two integers and prints the result.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int a = 10;\n    int b = 20;\n    \n  }\n}' },
+  { id: 'java-3', title: 'Even Or Odd', prompt: 'Write a Java program that checks whether a number is even or odd.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int number = 17;\n    \n  }\n}' },
+  { id: 'java-4', title: 'Largest Of Three', prompt: 'Write a Java program to find the largest among three numbers.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int a = 14;\n    int b = 9;\n    int c = 27;\n    \n  }\n}' },
+  { id: 'java-5', title: 'Multiplication Table', prompt: 'Write a Java program that prints the multiplication table of 5.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int number = 5;\n    \n  }\n}' },
+  { id: 'java-6', title: 'Factorial', prompt: 'Write a Java program to calculate the factorial of a given number.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int number = 5;\n    \n  }\n}' },
+  { id: 'java-7', title: 'Reverse String', prompt: 'Write a Java program to reverse a string.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    String text = "automation";\n    \n  }\n}' },
+  { id: 'java-8', title: 'Palindrome String', prompt: 'Write a Java program to check whether a string is a palindrome.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    String text = "level";\n    \n  }\n}' },
+  { id: 'java-9', title: 'Count Vowels', prompt: 'Write a Java program that counts vowels in a string.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    String text = "Quality Assurance";\n    \n  }\n}' },
+  { id: 'java-10', title: 'Array Sum', prompt: 'Write a Java program to calculate the sum of all elements in an array.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int[] numbers = {2, 4, 6, 8, 10};\n    \n  }\n}' },
+  { id: 'java-11', title: 'Array Maximum', prompt: 'Write a Java program to find the maximum element in an array.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int[] numbers = {12, 3, 45, 7, 29};\n    \n  }\n}' },
+  { id: 'java-12', title: 'Sort Array', prompt: 'Write a Java program to sort an integer array in ascending order.', starterCode: 'import java.util.Arrays;\n\npublic class Solution {\n  public static void main(String[] args) {\n    int[] numbers = {9, 1, 6, 3, 7};\n    \n  }\n}' },
+  { id: 'java-13', title: 'Linear Search', prompt: 'Write a Java program to search for an element in an array using linear search.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int[] numbers = {4, 8, 15, 16, 23, 42};\n    int target = 15;\n    \n  }\n}' },
+  { id: 'java-14', title: 'Fibonacci Series', prompt: 'Write a Java program to print the first 10 numbers of the Fibonacci series.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int count = 10;\n    \n  }\n}' },
+  { id: 'java-15', title: 'Prime Number Check', prompt: 'Write a Java program to check whether a number is prime.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int number = 29;\n    \n  }\n}' },
+  { id: 'java-16', title: 'Count Digits', prompt: 'Write a Java program to count the digits in an integer.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int number = 98452;\n    \n  }\n}' },
+  { id: 'java-17', title: 'Swap Without Temp', prompt: 'Write a Java program to swap two numbers without using a temporary variable.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int a = 7;\n    int b = 12;\n    \n  }\n}' },
+  { id: 'java-18', title: 'Second Largest', prompt: 'Write a Java program to find the second largest element in an array.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int[] numbers = {11, 5, 22, 9, 17};\n    \n  }\n}' },
+  { id: 'java-19', title: 'Remove Spaces', prompt: 'Write a Java program to remove spaces from a string.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    String text = "Tek Arch Technology";\n    \n  }\n}' },
+  { id: 'java-20', title: 'Character Frequency', prompt: 'Write a Java program to count how many times a character appears in a string.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    String text = "selenium";\n    char target = \'e\';\n    \n  }\n}' },
+  { id: 'java-21', title: 'Reverse Number', prompt: 'Write a Java program to reverse an integer.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int number = 12345;\n    \n  }\n}' },
+  { id: 'java-22', title: 'Sum Of Digits', prompt: 'Write a Java program to find the sum of digits in an integer.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int number = 2468;\n    \n  }\n}' },
+  { id: 'java-23', title: 'Word Count', prompt: 'Write a Java program to count the number of words in a sentence.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    String sentence = "Java coding helps QA automation engineers";\n    \n  }\n}' },
+  { id: 'java-24', title: 'Duplicate Elements', prompt: 'Write a Java program to print duplicate elements in an integer array.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int[] numbers = {1, 3, 5, 3, 7, 1, 9};\n    \n  }\n}' },
+  { id: 'java-25', title: 'Student Grade', prompt: 'Write a Java program that prints a grade based on a score using if-else conditions.', starterCode: 'public class Solution {\n  public static void main(String[] args) {\n    int score = 86;\n    \n  }\n}' }
+];
+
 const STORAGE_KEY = 'qa-challenge-browser-store-v1';
 const SESSION_KEY = 'qa-challenge-browser-session-v1';
 
@@ -65,6 +93,8 @@ const state = {
   results: [],
   adminResults: null,
   resultReview: null,
+  selectedCodingQuestionId: JAVA_CODING_QUESTIONS[0].id,
+  codingDrafts: {},
   codingOutput: '',
   runtimeMode: 'browser'
 };
@@ -416,13 +446,30 @@ function renderAdmin() {
 }
 
 function renderCoding() {
+  const activeQuestion = getActiveCodingQuestion();
+  const currentCode = getCodingDraft(activeQuestion.id);
   return `
     <section class="panel">
       <h3>Live Java Coding Lab</h3>
       <p class="muted">${state.runtimeMode === 'server'
         ? 'Paste a Java class and compile it instantly. The server will compile and run it for you.'
         : 'Static deployments keep assessments available, but Java compilation is disabled here. Run the local Node app to compile and execute Java code.'}</p>
-      <textarea id="java-code" rows="18" spellcheck="false">public class Solution {\n  public static void main(String[] args) {\n    System.out.println("Hello from QA Challenge");\n  }\n}</textarea>
+      <div class="form-stack">
+        <label for="coding-question-select">Choose one of the 25 Java questions</label>
+        <select id="coding-question-select">
+          ${JAVA_CODING_QUESTIONS.map((question) => `
+            <option value="${question.id}" ${question.id === activeQuestion.id ? 'selected' : ''}>
+              ${question.title}
+            </option>
+          `).join('')}
+        </select>
+      </div>
+      <div class="question-card">
+        <div class="badge">Question ${JAVA_CODING_QUESTIONS.findIndex((question) => question.id === activeQuestion.id) + 1} of ${JAVA_CODING_QUESTIONS.length}</div>
+        <h3>${activeQuestion.title}</h3>
+        <p class="muted">${activeQuestion.prompt}</p>
+      </div>
+      <textarea id="java-code" rows="18" spellcheck="false">${escapeHtml(currentCode)}</textarea>
       <div class="form-row" style="margin-top: 1rem;">
         <button id="compile-button">Compile & Run</button>
       </div>
@@ -605,13 +652,41 @@ function bindResultActions() {
 }
 
 function bindCodingActions() {
+  const select = document.getElementById('coding-question-select');
+  select?.addEventListener('change', (event) => {
+    state.selectedCodingQuestionId = event.target.value;
+    state.codingOutput = '';
+    render();
+  });
+
+  const editor = document.getElementById('java-code');
+  editor?.addEventListener('input', (event) => {
+    state.codingDrafts[state.selectedCodingQuestionId] = event.target.value;
+  });
+
   const button = document.getElementById('compile-button');
   button?.addEventListener('click', async () => {
     const code = document.getElementById('java-code').value;
+    state.codingDrafts[state.selectedCodingQuestionId] = code;
     const response = await backend.compile(code);
     state.codingOutput = response.output || response.error || 'No output.';
     render();
   });
+}
+
+function getActiveCodingQuestion() {
+  return JAVA_CODING_QUESTIONS.find((question) => question.id === state.selectedCodingQuestionId) || JAVA_CODING_QUESTIONS[0];
+}
+
+function getCodingDraft(questionId) {
+  const savedDraft = state.codingDrafts[questionId];
+  if (typeof savedDraft === 'string') {
+    return savedDraft;
+  }
+
+  const question = JAVA_CODING_QUESTIONS.find((entry) => entry.id === questionId) || JAVA_CODING_QUESTIONS[0];
+  state.codingDrafts[question.id] = question.starterCode;
+  return question.starterCode;
 }
 
 async function loadDashboardData() {
