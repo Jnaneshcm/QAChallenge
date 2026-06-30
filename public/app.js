@@ -1639,8 +1639,6 @@ function renderDeploymentNotice() {
 
   return `
     <section class="panel">
-      <h3>Static deployment mode</h3>
-      <p class="muted">This hosted build stores users, attempts, and results in this browser so the assessments stay available on Netlify. Use <strong>admin</strong> / <strong>admin123</strong> for the admin view.</p>
     </section>
   `;
 }
