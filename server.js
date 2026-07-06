@@ -5,6 +5,13 @@ const path = require('path');
 const crypto = require('crypto');
 const { execFile } = require('child_process');
 
+let netlifyBlobs;
+try {
+  netlifyBlobs = require('@netlify/blobs');
+} catch (error) {
+  netlifyBlobs = null;
+}
+
 const app = express();
 const apiRouter = express.Router();
 const PORT = process.env.PORT || 3000;
@@ -116,12 +123,41 @@ function createEmptyStore() {
   return { users: [], attempts: [] };
 }
 
-function readStore() {
+function getBlobStore() {
+  if (!netlifyBlobs) {
+    return null;
+  }
+
+  try {
+    return netlifyBlobs.getStore({
+      name: process.env.NETLIFY_BLOB_STORE || 'qa-challenge-data',
+      siteID: process.env.NETLIFY_SITE_ID,
+      token: process.env.NETLIFY_AUTH_TOKEN || process.env.NETLIFY_API_TOKEN
+    });
+  } catch (error) {
+    return null;
+  }
+}
+
+async function readStore() {
+  if (IS_NETLIFY && getBlobStore()) {
+    const raw = await getBlobStore().get('store.json');
+    if (!raw) {
+      return createEmptyStore();
+    }
+    return JSON.parse(raw);
+  }
+
   ensureDataFile();
   return JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
 }
 
-function writeStore(store) {
+async function writeStore(store) {
+  if (IS_NETLIFY && getBlobStore()) {
+    await getBlobStore().setJSON('store.json', store);
+    return;
+  }
+
   ensureDataFile();
   fs.writeFileSync(DATA_FILE, JSON.stringify(store, null, 2));
 }
@@ -138,8 +174,8 @@ function verifyPassword(password, storedHash) {
   return derived === hashed;
 }
 
-function seedAdminUser() {
-  const store = readStore();
+async function seedAdminUser() {
+  const store = await readStore();
   if (!store.users.some((user) => user.username === 'admin')) {
     store.users.push({
       id: createId('user'),
@@ -149,7 +185,7 @@ function seedAdminUser() {
       role: 'admin',
       createdAt: new Date().toISOString()
     });
-    writeStore(store);
+    await writeStore(store);
   }
 }
 
@@ -238,8 +274,12 @@ function getTopicBySlug(slug) {
   return topics.find((topic) => topic.slug === slug);
 }
 
-function getCurrentUser(req) {
-  return req.session.userId ? readStore().users.find((user) => user.id === req.session.userId) : null;
+async function getCurrentUser(req) {
+  if (!req.session.userId) {
+    return null;
+  }
+  const store = await readStore();
+  return store.users.find((user) => user.id === req.session.userId) || null;
 }
 
 function requireAuth(req, res, next) {
@@ -266,11 +306,11 @@ apiRouter.get('/topics', (_req, res) => {
   res.json(topics);
 });
 
-apiRouter.get('/me', (req, res) => {
+apiRouter.get('/me', async (req, res) => {
   if (!req.session.userId) {
     return res.status(401).json({ error: 'Not logged in' });
   }
-  const store = readStore();
+  const store = await readStore();
   const user = store.users.find((entry) => entry.id === req.session.userId);
   if (!user) {
     return res.status(401).json({ error: 'Session invalid' });
@@ -278,12 +318,12 @@ apiRouter.get('/me', (req, res) => {
   res.json(sanitizeUser(user));
 });
 
-apiRouter.post('/auth/register', (req, res) => {
+apiRouter.post('/auth/register', async (req, res) => {
   const { username, password, preferredName } = req.body;
   if (!username || !password) {
     return res.status(400).json({ error: 'Username and password are required' });
   }
-  const store = readStore();
+  const store = await readStore();
   if (store.users.some((user) => user.username.toLowerCase() === username.toLowerCase())) {
     return res.status(409).json({ error: 'That username is already taken' });
   }
@@ -296,18 +336,18 @@ apiRouter.post('/auth/register', (req, res) => {
     createdAt: new Date().toISOString()
   };
   store.users.push(newUser);
-  writeStore(store);
+  await writeStore(store);
   req.session.userId = newUser.id;
   writeSession(res, newUser.id);
   res.json(sanitizeUser(newUser));
 });
 
-apiRouter.post('/auth/login', (req, res) => {
+apiRouter.post('/auth/login', async (req, res) => {
   const { username, password } = req.body;
   if (!username || !password) {
     return res.status(400).json({ error: 'Username and password are required' });
   }
-  const store = readStore();
+  const store = await readStore();
   const user = store.users.find((entry) => entry.username.toLowerCase() === username.toLowerCase());
   if (!user || !verifyPassword(password, user.passwordHash)) {
     return res.status(401).json({ error: 'Invalid credentials' });
@@ -323,12 +363,12 @@ apiRouter.post('/auth/logout', (req, res) => {
   res.json({ ok: true });
 });
 
-apiRouter.post('/tests/:topic/start', requireAuth, (req, res) => {
+apiRouter.post('/tests/:topic/start', requireAuth, async (req, res) => {
   const topic = getTopicBySlug(req.params.topic);
   if (!topic) {
     return res.status(404).json({ error: 'Topic not found' });
   }
-  const store = readStore();
+  const store = await readStore();
   const attempt = {
     id: createId('attempt'),
     userId: req.session.userId,
@@ -344,7 +384,7 @@ apiRouter.post('/tests/:topic/start', requireAuth, (req, res) => {
     timeLimitMs: topic.timeLimitMinutes * 60 * 1000
   };
   store.attempts.push(attempt);
-  writeStore(store);
+  await writeStore(store);
 
   const safeQuestions = attempt.questions.map((question) => ({
     id: question.id,
@@ -356,12 +396,12 @@ apiRouter.post('/tests/:topic/start', requireAuth, (req, res) => {
   res.json({ attempt, questions: safeQuestions });
 });
 
-apiRouter.post('/tests/:topic/submit', requireAuth, (req, res) => {
+apiRouter.post('/tests/:topic/submit', requireAuth, async (req, res) => {
   const topic = getTopicBySlug(req.params.topic);
   if (!topic) {
     return res.status(404).json({ error: 'Topic not found' });
   }
-  const store = readStore();
+  const store = await readStore();
   const attempt = [...store.attempts].reverse().find((entry) => entry.userId === req.session.userId && entry.topic === topic.slug && entry.status === 'in-progress');
   if (!attempt) {
     return res.status(404).json({ error: 'No active test found' });
@@ -386,12 +426,12 @@ apiRouter.post('/tests/:topic/submit', requireAuth, (req, res) => {
   attempt.timeSpentMs = elapsedMs;
   attempt.timeUp = timeUp;
 
-  writeStore(store);
+  await writeStore(store);
   res.json({ ok: true, result: withAttemptMetrics(attempt), timeUp });
 });
 
-apiRouter.get('/results', requireAuth, (req, res) => {
-  const store = readStore();
+apiRouter.get('/results', requireAuth, async (req, res) => {
+  const store = await readStore();
   const attempts = store.attempts
     .filter((entry) => entry.userId === req.session.userId)
     .sort((a, b) => new Date(b.startedAt) - new Date(a.startedAt))
@@ -399,8 +439,8 @@ apiRouter.get('/results', requireAuth, (req, res) => {
   res.json(attempts);
 });
 
-apiRouter.get('/admin/results', requireAuth, (req, res) => {
-  const store = readStore();
+apiRouter.get('/admin/results', requireAuth, async (req, res) => {
+  const store = await readStore();
   const user = store.users.find((entry) => entry.id === req.session.userId);
   if (!user || user.role !== 'admin') {
     return res.status(403).json({ error: 'Admin access only' });
@@ -487,7 +527,9 @@ app.use((error, req, res, next) => {
   next(error);
 });
 
-seedAdminUser();
+seedAdminUser().catch((error) => {
+  console.error('Failed to initialize admin user', error);
+});
 
 if (require.main === module) {
   app.listen(PORT, () => {

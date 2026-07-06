@@ -21,6 +21,22 @@
       "passwordHash": "6503d11a6b97c97537f933f9cbe95f5d:a9497ba9f24538a79a28c004902b918d734d970c372e2c97e9109c0a5bef2dd80ea6c60237410dd0f8280b98ac79237e9d0f76ff13bf23e8843b68b463fee2e4",
       "role": "student",
       "createdAt": "2026-06-30T16:12:31.050Z"
+    },
+    {
+      "id": "user-1783356526918-36731074",
+      "username": "incognito-check",
+      "preferredName": "Incognito Check",
+      "passwordHash": "0d8998852d4d3fda2b7815204dccde78:ab58ff668e018e54899ec738c0182dc2a89d82c0ffbcfc60c27d8af0e2337a43de6af280eabdc92cb0e21647ecb7140cf0d088174dfb20abb7dd5e5c47723150",
+      "role": "student",
+      "createdAt": "2026-07-06T16:48:47.041Z"
+    },
+    {
+      "id": "user-1783356975934-9b8ff25f",
+      "username": "persist-check",
+      "preferredName": "Persist Check",
+      "passwordHash": "9deeecb4d160ee361eb9c9885b5055da:1e644b639a307ec536248ad2669ba821138af60a2fe415b0a426e2b303985cc6305364619a9bde289ea8f5d7c36d844788340fbad64c3e461a1aed7d1fe9ea3e",
+      "role": "student",
+      "createdAt": "2026-07-06T16:56:16.035Z"
     }
   ],
   "attempts": [
