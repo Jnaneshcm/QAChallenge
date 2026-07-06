@@ -13,6 +13,14 @@
       "passwordHash": "9c2a573f0d81c650b00aeea12cef4586:3dcd923a622c7a5ea17132669c361d8621cc5df606e4f2ade92e6a5486583cacc7d6b5922fff58e14fd7cf5568cd53b7b4fab5beea1070ba540f0f64f46781aa",
       "role": "student",
       "createdAt": "2026-06-29T08:38:56.974Z"
+    },
+    {
+      "id": "user-1782835950953-623c315c",
+      "username": "test@123",
+      "preferredName": "test@123",
+      "passwordHash": "6503d11a6b97c97537f933f9cbe95f5d:a9497ba9f24538a79a28c004902b918d734d970c372e2c97e9109c0a5bef2dd80ea6c60237410dd0f8280b98ac79237e9d0f76ff13bf23e8843b68b463fee2e4",
+      "role": "student",
+      "createdAt": "2026-06-30T16:12:31.050Z"
     }
   ],
   "attempts": [
@@ -3966,6 +3974,5266 @@
       "timeLimitMs": 10800000,
       "timeSpentMs": 47955,
       "timeUp": false
+    },
+    {
+      "id": "attempt-1782827302162-c1807d13",
+      "userId": "user-1782722336872-db2880de",
+      "topic": "selenium-webdriver",
+      "title": "Selenium Webdriver",
+      "startedAt": "2026-06-30T13:48:22.169Z",
+      "submittedAt": null,
+      "status": "in-progress",
+      "questions": [
+        {
+          "id": "selenium-webdriver-7",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (7)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-49",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (49)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-13",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (13)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-59",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (59)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-36",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (36)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-4",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (4)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-15",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (15)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-35",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (35)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-5",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (5)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-78",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (78)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-22",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (22)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-67",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (67)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-86",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (86)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-71",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (71)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-64",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (64)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-39",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (39)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-79",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (79)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-68",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (68)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-100",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (100)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-81",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (81)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-21",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (21)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-3",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (3)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-14",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (14)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-60",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (60)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-94",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (94)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-25",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (25)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-97",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (97)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-46",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (46)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-55",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (55)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-93",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (93)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-30",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (30)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-2",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (2)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-12",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (12)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-44",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (44)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-31",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (31)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-96",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (96)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-51",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (51)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-28",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (28)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-58",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (58)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-95",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (95)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-24",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (24)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-89",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (89)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-23",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (23)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-29",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (29)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-26",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (26)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-91",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (91)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-32",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (32)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-42",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (42)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-52",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (52)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-90",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (90)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-56",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (56)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-66",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (66)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-18",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (18)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-75",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (75)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-80",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (80)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-8",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (8)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-57",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (57)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-53",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (53)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-38",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (38)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-92",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (92)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-20",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (20)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-40",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (40)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-70",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (70)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-77",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (77)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-11",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (11)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-99",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (99)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-82",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (82)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-73",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (73)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-47",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (47)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-43",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (43)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-48",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (48)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-63",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (63)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-10",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (10)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-76",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (76)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-88",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (88)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-34",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (34)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-19",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (19)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-69",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (69)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-33",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (33)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-54",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (54)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-16",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (16)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-9",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (9)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-65",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (65)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-27",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (27)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-50",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (50)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-45",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (45)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-84",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (84)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-74",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (74)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-72",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (72)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-98",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (98)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-17",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (17)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-41",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (41)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-62",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (62)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-85",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (85)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-83",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (83)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-87",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (87)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-1",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (1)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-37",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (37)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-6",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (6)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-61",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (61)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        }
+      ],
+      "answers": {},
+      "score": 0,
+      "total": 100,
+      "timeLimitMs": 10800000
+    },
+    {
+      "id": "attempt-1782827440243-d6c87a1b",
+      "userId": "user-1782722336872-db2880de",
+      "topic": "selenium-webdriver",
+      "title": "Selenium Webdriver",
+      "startedAt": "2026-06-30T13:50:40.245Z",
+      "submittedAt": null,
+      "status": "in-progress",
+      "questions": [
+        {
+          "id": "selenium-webdriver-48",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (48)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-8",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (8)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-45",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (45)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-53",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (53)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-16",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (16)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-84",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (84)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-100",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (100)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-22",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (22)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-44",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (44)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-67",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (67)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-90",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (90)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-30",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (30)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-59",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (59)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-72",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (72)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-43",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (43)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-7",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (7)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-14",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (14)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-6",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (6)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-73",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (73)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-46",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (46)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-81",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (81)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-34",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (34)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-91",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (91)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-33",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (33)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-64",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (64)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-82",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (82)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-51",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (51)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-63",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (63)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-25",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (25)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-80",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (80)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-41",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (41)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-49",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (49)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-50",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (50)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-86",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (86)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-93",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (93)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-32",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (32)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-89",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (89)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-26",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (26)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-31",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (31)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-58",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (58)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-61",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (61)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-87",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (87)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-18",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (18)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-20",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (20)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-74",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (74)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-36",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (36)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-85",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (85)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-37",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (37)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-39",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (39)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-57",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (57)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-62",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (62)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-54",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (54)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-23",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (23)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-96",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (96)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-28",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (28)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-24",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (24)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-92",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (92)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-97",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (97)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-19",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (19)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-56",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (56)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-40",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (40)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-42",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (42)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-3",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (3)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-76",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (76)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-60",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (60)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-12",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (12)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-70",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (70)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-13",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (13)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-65",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (65)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-88",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (88)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-29",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (29)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-95",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (95)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-79",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (79)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-71",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (71)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-35",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (35)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-68",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (68)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-11",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (11)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-21",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (21)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-78",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (78)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-77",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (77)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-27",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (27)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-99",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (99)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-83",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (83)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-9",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (9)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-5",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (5)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-1",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (1)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-52",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (52)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-15",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (15)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-94",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (94)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-75",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (75)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-55",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (55)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-17",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (17)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-66",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (66)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-10",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (10)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-69",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (69)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-47",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (47)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-2",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (2)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-38",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (38)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-4",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (4)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-98",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (98)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        }
+      ],
+      "answers": {},
+      "score": 0,
+      "total": 100,
+      "timeLimitMs": 10800000
+    },
+    {
+      "id": "attempt-1782827738545-cb642bd0",
+      "userId": "user-1782722336872-db2880de",
+      "topic": "rest-api-testing",
+      "title": "Rest Api testing",
+      "startedAt": "2026-06-30T13:55:38.546Z",
+      "submittedAt": null,
+      "status": "in-progress",
+      "questions": [
+        {
+          "id": "rest-api-testing-40",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (40)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-19",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (19)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-32",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (32)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-58",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (58)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-47",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (47)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-83",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (83)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-63",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (63)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-69",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (69)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-66",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (66)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-51",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (51)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-98",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (98)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-27",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (27)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-30",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (30)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-59",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (59)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-1",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (1)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-13",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (13)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-81",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (81)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-65",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (65)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-7",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (7)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-61",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (61)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-10",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (10)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-14",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (14)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-11",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (11)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-85",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (85)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-78",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (78)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-5",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (5)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-12",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (12)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-53",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (53)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-100",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (100)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-89",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (89)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-17",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (17)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-92",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (92)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-64",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (64)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-87",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (87)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-79",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (79)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-18",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (18)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-21",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (21)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-16",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (16)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-70",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (70)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-29",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (29)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-31",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (31)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-4",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (4)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-67",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (67)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-84",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (84)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-77",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (77)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-2",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (2)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-91",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (91)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-45",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (45)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-62",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (62)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-75",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (75)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-99",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (99)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-57",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (57)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-15",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (15)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-20",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (20)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-28",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (28)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-8",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (8)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-42",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (42)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-82",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (82)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-35",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (35)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-90",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (90)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-93",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (93)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-46",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (46)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-95",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (95)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-76",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (76)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-24",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (24)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-9",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (9)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-60",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (60)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-48",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (48)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-50",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (50)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-38",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (38)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-25",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (25)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-86",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (86)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-44",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (44)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-22",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (22)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-39",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (39)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-33",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (33)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-88",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (88)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-97",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (97)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-80",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (80)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-52",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (52)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-37",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (37)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-49",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (49)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-23",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (23)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-36",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (36)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-55",
+          "topic": "Rest Api testing",
+          "prompt": "Which tool is often used to inspect API requests and responses? (55)",
+          "options": [
+            "A. Figma",
+            "B. Postman",
+            "C. Photoshop",
+            "D. Excel"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Postman is popular for manual and automated API testing."
+        },
+        {
+          "id": "rest-api-testing-34",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (34)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-56",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (56)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-96",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (96)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-3",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (3)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-54",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (54)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-94",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (94)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-6",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (6)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-74",
+          "topic": "Rest Api testing",
+          "prompt": "Why are assertions important in API tests? (74)",
+          "options": [
+            "A. They speed up the server",
+            "B. They validate expected responses",
+            "C. They skip retries",
+            "D. They log credentials"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Assertions verify that responses match the expected contract."
+        },
+        {
+          "id": "rest-api-testing-43",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (43)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-26",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (26)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-73",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (73)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        },
+        {
+          "id": "rest-api-testing-71",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (71)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-41",
+          "topic": "Rest Api testing",
+          "prompt": "Which HTTP method is commonly used to create a new resource? (41)",
+          "options": [
+            "A. GET",
+            "B. POST",
+            "C. DELETE",
+            "D. PATCH"
+          ],
+          "correctAnswer": 1,
+          "explanation": "POST is used to create resources on the server."
+        },
+        {
+          "id": "rest-api-testing-72",
+          "topic": "Rest Api testing",
+          "prompt": "What does status code 200 usually indicate? (72)",
+          "options": [
+            "A. Created",
+            "B. Bad request",
+            "C. Success",
+            "D. Moved permanently"
+          ],
+          "correctAnswer": 2,
+          "explanation": "200 OK indicates the request completed successfully."
+        },
+        {
+          "id": "rest-api-testing-68",
+          "topic": "Rest Api testing",
+          "prompt": "Which header is commonly used to send JSON data? (68)",
+          "options": [
+            "A. Accept",
+            "B. Authorization",
+            "C. Content-Type",
+            "D. Cookie"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Content-Type application/json identifies JSON request bodies."
+        }
+      ],
+      "answers": {},
+      "score": 0,
+      "total": 100,
+      "timeLimitMs": 10800000
+    },
+    {
+      "id": "attempt-1782835037162-a0bd3370",
+      "userId": "user-1782722149512-507102cd",
+      "topic": "selenium-webdriver",
+      "title": "Selenium Webdriver",
+      "startedAt": "2026-06-30T15:57:17.163Z",
+      "submittedAt": null,
+      "status": "in-progress",
+      "questions": [
+        {
+          "id": "selenium-webdriver-17",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (17)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-18",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (18)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-6",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (6)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-1",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (1)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-60",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (60)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-93",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (93)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-19",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (19)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-69",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (69)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-20",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (20)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-51",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (51)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-65",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (65)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-27",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (27)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-50",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (50)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-70",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (70)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-8",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (8)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-37",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (37)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-80",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (80)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-74",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (74)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-4",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (4)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-3",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (3)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-31",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (31)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-29",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (29)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-41",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (41)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-5",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (5)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-66",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (66)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-21",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (21)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-64",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (64)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-94",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (94)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-96",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (96)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-10",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (10)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-78",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (78)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-43",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (43)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-45",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (45)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-61",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (61)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-75",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (75)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-55",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (55)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-46",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (46)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-76",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (76)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-89",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (89)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-54",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (54)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-26",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (26)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-83",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (83)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-25",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (25)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-62",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (62)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-12",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (12)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-59",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (59)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-100",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (100)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-72",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (72)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-23",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (23)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-7",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (7)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-79",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (79)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-24",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (24)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-88",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (88)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-44",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (44)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-85",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (85)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-47",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (47)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-91",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (91)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-48",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (48)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-36",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (36)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-52",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (52)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-42",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (42)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-15",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (15)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-22",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (22)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-68",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (68)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-73",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (73)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-53",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (53)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-77",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (77)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-16",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (16)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-87",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (87)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-30",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (30)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-57",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (57)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-40",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (40)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-98",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (98)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-95",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (95)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-56",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (56)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-67",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (67)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-97",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (97)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-58",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (58)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-90",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (90)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-35",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which command is used to pause execution until a condition is met? (35)",
+          "options": [
+            "A. sleep()",
+            "B. waitUntil()",
+            "C. explicit wait",
+            "D. navigate()"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Explicit waits are the standard way to wait for a specific condition."
+        },
+        {
+          "id": "selenium-webdriver-38",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (38)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-39",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (39)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-86",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (86)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-9",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (9)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-99",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (99)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-32",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (32)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-13",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (13)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-84",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (84)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-82",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (82)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-34",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (34)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-81",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (81)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-33",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (33)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-28",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (28)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-49",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (49)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-14",
+          "topic": "Selenium Webdriver",
+          "prompt": "What does the Page Object Model help with? (14)",
+          "options": [
+            "A. Reducing test duplication",
+            "B. Removing browser drivers",
+            "C. Avoiding waits",
+            "D. Skipping assertions"
+          ],
+          "correctAnswer": 0,
+          "explanation": "POM keeps locators and workflows in reusable page classes."
+        },
+        {
+          "id": "selenium-webdriver-63",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which Selenium method launches a browser session? (63)",
+          "options": [
+            "A. get()",
+            "B. quit()",
+            "C. findElement()",
+            "D. switchTo()"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The WebDriver instance uses the browser driver to start and manage sessions."
+        },
+        {
+          "id": "selenium-webdriver-2",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (2)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-92",
+          "topic": "Selenium Webdriver",
+          "prompt": "What is the main purpose of WebDriverWait? (92)",
+          "options": [
+            "A. To wait for element visibility",
+            "B. To close the browser",
+            "C. To switch tabs",
+            "D. To download files"
+          ],
+          "correctAnswer": 0,
+          "explanation": "WebDriverWait helps wait for conditions before interacting with elements."
+        },
+        {
+          "id": "selenium-webdriver-71",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (71)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        },
+        {
+          "id": "selenium-webdriver-11",
+          "topic": "Selenium Webdriver",
+          "prompt": "Which locator strategy is most resilient for dynamic UI elements? (11)",
+          "options": [
+            "A. ID",
+            "B. XPath",
+            "C. CSS Selector",
+            "D. Class Name"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CSS selectors and robust locators are usually preferred for dynamic layouts."
+        }
+      ],
+      "answers": {},
+      "score": 0,
+      "total": 100,
+      "timeLimitMs": 10800000
     }
   ]
 }

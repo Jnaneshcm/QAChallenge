@@ -39,14 +39,14 @@ const TOPICS = [
 
 const QUESTION_TEMPLATES = {
   'selenium-webdriver': [
-    { stem: 'What is Selenium primarily used for?', options: ['Database Testing', 'Web Application Automation', 'API Testing', 'Performance Testing'], answer: 1, explanation: 'Selenium is primarily used for automating web browsers for testing web applications.' },
-    { stem: 'Which Selenium component is used to automate browsers?', options: ['Selenium IDE', 'Selenium Grid', 'Selenium WebDriver', 'Selenium RC'], answer: 2, explanation: 'Selenium WebDriver is the primary component used for browser automation.' },
-    { stem: 'Which programming language is NOT officially supported by Selenium?', options: ['Java', 'Python', 'C#', 'Swift'], answer: 3, explanation: 'Selenium officially supports Java, Python, C#, Ruby, JavaScript and Kotlin, but not Swift.' },
-    { stem: 'Which browser is NOT supported by Selenium WebDriver?', options: ['Chrome', 'Firefox', 'Edge', 'Adobe Reader'], answer: 3, explanation: 'Adobe Reader is not a web browser and cannot be automated using Selenium WebDriver.' },
-    { stem: 'Which interface is implemented by ChromeDriver?', options: ['SearchContext', 'WebElement', 'WebDriver', 'JavascriptExecutor'], answer: 2, explanation: 'ChromeDriver implements the WebDriver interface.' },
+    { stem: 'What is Selenium primarily used for?', options: ['Database Testing', 'Web Application Automation', 'API Testing', 'Performance Testing'], answer: 1, explanation: 'Selenium is primarily used for automating web browsers for testing web applications.'},
+    { stem: 'Which Selenium component is used to automate browsers?', options: ['Selenium IDE', 'Selenium Grid', 'Selenium WebDriver', 'Selenium RC'], answer: 2, explanation: 'Selenium WebDriver is the primary component used for browser automation.'},
+    { stem: 'Which programming language is NOT officially supported by Selenium?', options: ['Java', 'Python', 'C#', 'Swift'], answer: 3, explanation: 'Selenium officially supports Java, Python, C#, Ruby, JavaScript and Kotlin, but not Swift.'},
+    { stem: 'Which browser is NOT supported by Selenium WebDriver?', options: ['Chrome', 'Firefox', 'Edge', 'Adobe Reader'], answer: 3, explanation: 'Adobe Reader is not a web browser and cannot be automated using Selenium WebDriver.'},
+    { stem: 'Which interface is implemented by ChromeDriver?', options: ['SearchContext', 'WebElement', 'WebDriver', 'JavascriptExecutor'], answer: 2, explanation: 'ChromeDriver implements the WebDriver interface.'},
     { stem: 'Which statement creates a Chrome browser instance?', options: ['new ChromeDriver()', 'driver.launch()', 'driver.open()', 'browser.start()'], answer: 0, explanation: 'Instantiating ChromeDriver launches a Chrome browser.' },
     { stem: 'Which WebDriver method opens a specified URL?', options: ['driver.open()', 'driver.navigate()', 'driver.get()', 'driver.load()'], answer: 2, explanation: 'driver.get() navigates the browser to the specified URL.' },
-    { stem: 'Which method returns the title of the current webpage?', options: ['driver.title()', 'driver.getTitle()', 'driver.pageTitle()', 'driver.fetchTitle()'], answer: 1, explanation: 'getTitle() returns the title of the current webpage.' },
+    { stem: 'Which method returns the title of the current webpage?', options: ['driver.title()', 'driver.getTitle()', 'driver.pageTitle()', 'driver.fetchTitle()'], answer: 1, explanation: 'getTitle() returns the title of the current webpage.'},
     { stem: 'Which method retrieves the current URL of the browser?', options: ['driver.getCurrentUrl()', 'driver.url()', 'driver.currentUrl()', 'driver.location()'], answer: 0, explanation: 'getCurrentUrl() returns the current page URL.' },
     { stem: 'Which locator strategy finds an element using its id attribute?', options: ['By.name()', 'By.className()', 'By.id()', 'By.tagName()'], answer: 2, explanation: 'By.id() locates an element using its unique id attribute.' },
     { stem: 'Which locator strategy searches using the name attribute?', options: ['By.name()', 'By.id()', 'By.xpath()', 'By.cssSelector()'], answer: 0, explanation: 'By.name() locates elements using their name attribute.' },
@@ -2256,9 +2256,6 @@ function downloadCertificate(attempt, username) {
         <div class="sign-box">
           <div class="sign-line">Authorized by TekArch Technology</div>
         </div>
-        <div class="sign-box">
-          <div class="sign-line">Candidate Preferred Name</div>
-        </div>
       </div>
       <div class="footer">
         <div>Issued on: ${escapeHtml(issuedOn)}</div>
@@ -2297,16 +2294,14 @@ function isLocalHost() {
 }
 
 async function selectBackend() {
-  if (isLocalHost()) {
-    try {
-      const health = await serverApi('/api/health');
-      if (health && !health.error && health.status === 'ok') {
-        state.runtimeMode = 'server';
-        return createServerBackend();
-      }
-    } catch (error) {
-      console.warn('Falling back to browser mode because the local API is unavailable.', error);
+  try {
+    const health = await serverApi('/api/health');
+    if (health && !health.error && health.status === 'ok') {
+      state.runtimeMode = 'server';
+      return createServerBackend();
     }
+  } catch (error) {
+    console.warn('Falling back to browser mode because the API is unavailable.', error);
   }
 
   state.runtimeMode = 'browser';
@@ -2550,17 +2545,26 @@ async function serverApi(path, options = {}) {
     body: options.body ? JSON.stringify(options.body) : undefined
   };
 
-  const response = await fetch(path, config);
-  const contentType = response.headers.get('content-type') || '';
-  if (contentType.includes('application/json')) {
-    return response.json();
-  }
+  const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  const targetPath = isLocal
+    ? normalizedPath
+    : `/.netlify/functions/api${normalizedPath.replace(/^\/api/, '')}`;
 
-  const text = await response.text();
   try {
-    return JSON.parse(text);
+    const response = await fetch(targetPath, config);
+    const contentType = response.headers.get('content-type') || '';
+    const payload = contentType.includes('application/json')
+      ? await response.json()
+      : await response.text();
+
+    if (!response.ok && response.status >= 400) {
+      return typeof payload === 'string' ? { error: payload } : payload;
+    }
+
+    return typeof payload === 'string' ? (payload ? JSON.parse(payload) : { ok: true }) : payload;
   } catch (error) {
-    return { ok: response.ok, status: response.status, raw: text };
+    return { error: error.message || 'Unable to reach the API' };
   }
 }
 

@@ -8,12 +8,13 @@ const { execFile } = require('child_process');
 const app = express();
 const apiRouter = express.Router();
 const PORT = process.env.PORT || 3000;
-const DATA_FILE = path.join(__dirname, 'data', 'store.json');
+const IS_NETLIFY = Boolean(process.env.NETLIFY);
+const DATA_FILE = process.env.DATA_FILE || (IS_NETLIFY
+  ? path.join(os.tmpdir(), 'qa-challenge', 'store.json')
+  : path.join(__dirname, 'data', 'store.json'));
 const COOKIE_NAME = 'qa_session';
 const COOKIE_SECRET = process.env.COOKIE_SECRET || 'qa-challenge-secret';
-const IS_NETLIFY = Boolean(process.env.NETLIFY);
 const TEMP_DIR = IS_NETLIFY ? path.join(os.tmpdir(), 'qa-challenge') : path.join(__dirname, 'tmp');
-let inMemoryStore = null;
 
 if (!fs.existsSync(TEMP_DIR)) {
   fs.mkdirSync(TEMP_DIR, { recursive: true });
@@ -72,7 +73,8 @@ function clearSession(res) {
 }
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.json());
+app.use(express.json({ strict: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use((req, res, next) => {
   req.session = readSession(req);
   req.session.destroy = (callback) => {
@@ -104,9 +106,6 @@ const topics = [
 ];
 
 function ensureDataFile() {
-  if (IS_NETLIFY) {
-    return;
-  }
   if (!fs.existsSync(DATA_FILE)) {
     fs.mkdirSync(path.dirname(DATA_FILE), { recursive: true });
     fs.writeFileSync(DATA_FILE, JSON.stringify({ users: [], attempts: [] }, null, 2));
@@ -118,21 +117,12 @@ function createEmptyStore() {
 }
 
 function readStore() {
-  if (IS_NETLIFY) {
-    if (!inMemoryStore) {
-      inMemoryStore = createEmptyStore();
-    }
-    return JSON.parse(JSON.stringify(inMemoryStore));
-  }
   ensureDataFile();
   return JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
 }
 
 function writeStore(store) {
-  if (IS_NETLIFY) {
-    inMemoryStore = JSON.parse(JSON.stringify(store));
-    return;
-  }
+  ensureDataFile();
   fs.writeFileSync(DATA_FILE, JSON.stringify(store, null, 2));
 }
 
@@ -488,6 +478,13 @@ if (process.env.NETLIFY) {
 
 app.get('*', (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.use((error, req, res, next) => {
+  if (error instanceof SyntaxError && error.status === 400 && 'body' in error) {
+    return res.status(400).json({ error: 'Invalid JSON payload' });
+  }
+  next(error);
 });
 
 seedAdminUser();
