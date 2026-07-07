@@ -2422,7 +2422,7 @@ function createBrowserBackend() {
         startedAt: new Date().toISOString(),
         submittedAt: null,
         status: 'in-progress',
-        questions: shuffle(buildQuestionBank(topic.title, topic.slug)).slice(0, 100),
+        questions: buildQuestionBank(topic.title, topic.slug).slice(0, 100),
         answers: {},
         score: 0,
         total: 100,
@@ -2590,7 +2590,7 @@ function buildQuestionBank(topicTitle, slug) {
     questions.push({
       id: `${slug}-${index + 1}`,
       topic: topicTitle,
-      prompt: `${template.stem} (${index + 1})`,
+      prompt: template.stem,
       options: template.options.map((option, optionIndex) => `${String.fromCharCode(65 + optionIndex)}. ${option}`),
       correctAnswer: template.answer,
       explanation: template.explanation
