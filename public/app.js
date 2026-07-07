@@ -1783,7 +1783,7 @@ function renderResultReview() {
       <h3>Question Breakdown</h3>
       <table class="table">
         <thead>
-          <tr><th>No.</th><th>Status</th><th>Your Answer</th><th>Correct Answer</th><th>Question</th></tr>
+          <tr><th>No.</th><th>Status</th><th>Your Answer</th><th>Correct Answer</th><th>Question</th><th>Explanation</th></tr>
         </thead>
         <tbody>
           ${attempt.review.items.map((item) => `
@@ -1793,6 +1793,7 @@ function renderResultReview() {
               <td>${item.selectedOption}</td>
               <td>${item.correctOption}</td>
               <td>${item.prompt}</td>
+              <td>${escapeHtml(item.explanation || '')}</td>
             </tr>
           `).join('')}
         </tbody>
@@ -2195,6 +2196,7 @@ function buildAttemptReview(attempt) {
     return {
       number: index + 1,
       prompt: question.prompt || `Question ${index + 1}`,
+      explanation: question.explanation || '',
       selectedOption,
       correctOption,
       isCorrect: selectedIndex !== null && selectedIndex === correctIndex
